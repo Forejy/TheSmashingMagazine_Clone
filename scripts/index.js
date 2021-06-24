@@ -92,3 +92,12 @@ function mouseout () {
 document.getElementsByClassName('subnav-list')[0].onmouseleave = mouseout;
 
 
+// 
+
+function changeBoxShadow () {
+  wrapper = document.getElementsByClassName('promo-box__input-wrapper')[0];
+  wrapper.classList.toggle("js-box-shadow--black");
+}
+
+document.getElementsByClassName('promo-box__input')[0].onfocus = changeBoxShadow;
+document.getElementsByClassName('promo-box__input')[0].onblur = changeBoxShadow;
