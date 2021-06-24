@@ -822,8 +822,7 @@ html {
 }
 
 .promo-box__form, .promo-box-btn {
-  margin: 20px 0;
-  margin-bottom: 25px;
+  margin: 20px 0 25px 0;
 }
 
 /* TODO: card-btn--books */
@@ -862,6 +861,8 @@ html {
 
 /* FAIRETODO: tester la box-shadow dans l'autre sens */
 /* FAITTODO: Cherche le gris le plus assorti avec le bleu du container */
+
+
 
 
 /* //MARK: Smashings Guide Cards */
@@ -1007,8 +1008,7 @@ html {
 }
 
 .family-grid-section__h2 {
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 
 .promo-box--family__title {
@@ -1016,25 +1016,26 @@ html {
 }
 
 .promo-box--books {
-  padding-bottom: 94.397px;
+  padding-bottom: 95.814px;
 }
 
 .promo-box--workshops {
   background-color: #e7f8ff;
+  padding-bottom: 42px;
 }
 
 .promo-box--jobs {
-  padding-bottom: 88.547px;
+  padding-bottom: 75.347px;
   background-color: #ffe5e2;
 }
 
 .promo-box--membership {
-  padding-bottom: 40.58px;
+  padding-bottom: 52.58px;
   background-color: #e3f7e5;
 }
 
 .promo-box--newsletter-family {
-  padding-bottom: 40.58px;
+  padding-bottom: 52.58px;
   background-color: #fdffe5;
 }
 
@@ -1056,6 +1057,28 @@ html {
 
 .card-btn--newsletter-family {
   background-color: #ff6411;
+}
+
+.family-grid-carousel {
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: scroll;
+  white-space: nowrap;
+  border-right: 10px solid;
+  border-image: linear-gradient(white, #c5f6e2, #b6e9ff, #ffb9b1, #beecc2, #f9feb4) 1;
+  border-image: linear-gradient(white, white, #c5f6e2, #c5f6e2, #b6e9ff, #b6e9ff, #b6e9ff, #ffb9b1, #ffb9b1, #beecc2, #beecc2, #f9feb4, #f9feb4) 1;
+}
+
+.card {
+  white-space: initial;
+}
+
+.promo-box--family {
+  display: inline-block;
+  vertical-align: top;
+  width: 95%;
+  margin-left: 1%;
+  margin-right: 4%;
 }
 
 /* //MARK: Conf Panel */
@@ -1203,13 +1226,11 @@ html {
 
 
 
-a:not(h2 a):active, h2:active {
+a:not(h2 a):not(.subnav-item a):active, h2:not(.promo-box__title):not(.family-grid-section__h2):not(.main-footer__title):active {
   outline: 3px dotted #811d15;
-
-  /* outline: none;  pourquoi ? par rapport au main-header */
 }
 
-h2:active {
+.author-post__title:active {
   margin: 6px -6px;
   padding: 4px 6px;
 }
