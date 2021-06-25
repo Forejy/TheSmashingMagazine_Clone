@@ -622,7 +622,7 @@ html {
 }
 
 .subnav-list {
-  margin-left: calc(5px);
+  margin-left: 5px;
   display: block;
   white-space: nowrap;
   overflow-x: scroll;
@@ -767,7 +767,7 @@ html {
   text-align: center;
 }
 
-.promo-box__input-wrapper, .card-btn {
+.promo-box__input-wrapper, .btn--card {
   box-sizing: border-box;
   display: inline-block;
   border-radius: 10px;
@@ -780,10 +780,15 @@ html {
   background-color: white;
 }
 
-.card-btn {
+.btn--card {
   color: white;
   font-weight: 700;
   padding: 16.5px 28px;
+}
+
+.promo-box__email:active, .btn--card:active {
+  box-shadow: inset 0px 3px 3px 0px rgba(0,0,0,0.3);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 /* //MARK: Promo-box */
@@ -812,8 +817,14 @@ html {
   border-radius: 10px;
   padding: 12px 15px;
 
-
   background-color: white;
+
+  transition: background-color .4s ease-in-out, color .4s ease-in-out;
+}
+
+.promo-box__email:active {
+  background-color: var(--dark-red);
+  color: white;
 }
 
 .promo-box__title {
@@ -825,7 +836,7 @@ html {
   margin: 20px 0 25px 0;
 }
 
-/* TODO: card-btn--books */
+/* TODO: btn--card--books */
 
 .promo-box__input-wrapper {
   padding: 16px 20px;
@@ -928,7 +939,7 @@ html {
   width: max-content;
   padding: 0 15px;
   padding-bottom: 5px;
-  
+
   font-size: .8rem;
   border-bottom: 5px solid var(--dark-red);
 }
@@ -1039,34 +1050,35 @@ html {
   background-color: #fdffe5;
 }
 
-.card-btn--books {
+.btn--card--books {
   padding-bottom: 16.5px 33px;
 }
 
-.card-btn--workshops {
+.btn--card--workshops {
   background-color: #006fc6;
 }
 
-.card-btn--jobs {
+.btn--card--jobs {
   background-color: #e62143;
 }
 
-.card-btn--membership {
+.btn--card--membership {
   background-color: #41b14f;
 }
 
-.card-btn--newsletter-family {
+.btn--card--newsletter-family {
   background-color: #ff6411;
 }
 
 .family-grid-carousel {
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 20px;
   overflow-x: scroll;
   white-space: nowrap;
   border-right: 10px solid;
   border-image: linear-gradient(white, #c5f6e2, #b6e9ff, #ffb9b1, #beecc2, #f9feb4) 1;
-  border-image: linear-gradient(white, white, #c5f6e2, #c5f6e2, #b6e9ff, #b6e9ff, #b6e9ff, #ffb9b1, #ffb9b1, #beecc2, #beecc2, #f9feb4, #f9feb4) 1;
+  border-image: linear-gradient(white, white, #c5f6e2, #c5f6e2, #b6e9ff, #b6e9ff, #b6e9ff, #ffb9b1, #ffb9b1, #beecc2, #beecc2, #f9feb4, #f9feb4, white) 1;
 }
 
 .card {
@@ -1112,11 +1124,15 @@ html {
   font-size: 1.1rem;
 }
 
-.conf-panel-btn {
+.btn--conf-panel {
   cursor: pointer;
   margin: 40px 0;
   background-color: white;
   color: #277ecc;
+}
+
+.btn--conf-panel:active {
+  box-shadow: inset 0px 3px 3px 0px rgba(0,0,0, 0.4);
 }
 
 .conf-panel__img {
@@ -1188,10 +1204,6 @@ html {
   margin: 8px 6px;
 }
 
-.main-footer__nav-item--not-underlined {
-  text-decoration: none;
-}
-
 .main-footer__links:hover {
   color: #541712;
   transition: color .1s ease-out;
@@ -1226,7 +1238,7 @@ html {
 
 
 
-a:not(h2 a):not(.subnav-item a):active, h2:not(.promo-box__title):not(.family-grid-section__h2):not(.main-footer__title):active {
+a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):active, h2:not(.promo-box__title):not(.family-grid-section__h2):not(.main-footer__title):active {
   outline: 3px dotted #811d15;
 }
 
@@ -1249,7 +1261,7 @@ a:not(h2 a):not(.subnav-item a):active, h2:not(.promo-box__title):not(.family-gr
   margin: 11px -6px 14px -6px;
 }
 
-.conf-panel__title:active, .conf-panel-btn:active {
+.conf-panel__title:active, .btn--conf-panel:active {
   outline-color: #3D0706;
 }
 
