@@ -47,6 +47,13 @@ main {
   display: block;
 }
 
+/*  */
+
+section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* Remove the margin in all browsers. */
 
 body {
@@ -430,6 +437,7 @@ html {
 .search-bar_input {
   background-image: url(../media/magnify.svg);
   background-repeat: no-repeat;
+  background-origin: border-box;
   background-position: .75em center;
 
   box-sizing: border-box;
@@ -437,12 +445,11 @@ html {
   padding: 16px 15px 16px calc(22px + .75em + .75em);
 
   color: #515151;
-
 }
 
 .search-bar_input:focus {
-  outline: none;
   border: 3px dotted #811d15;
+  padding: 13px 12px 13px calc(22px + .75em + .75em - 3px);
 }
 
 .secondary-nav__list {
