@@ -703,18 +703,62 @@ html {
 
 .img-wrapper {
   position: relative;
-  display: block;
-  max-width: 300px;
+  display: inline-block;
+  /* max-width: 300px; */
+  height: min-content;
+  width: min-content;
+  border-radius: 10%;
+}
+
+.img-wrapper {
+  height: 41.44vw;
+}
+
+.img-wrapper--35vw {
+  height: 35.49vw;
+}
+
+.img-wrapper--75px {
+  height: var(--image-size--article_post);
+}
+
+.img-wrapper:active {
+  outline: 4px dotted #811d15;
+  padding: 1px;
+  margin: -1px;
 }
 
 .author-post__img {
   /* margin-bottom: 1.25rem; */
   border: 3px solid var(--dark-red);
   border-radius: 10%;
-  width: 32.5vw;
-  height: 32.5vw;
-  vertical-align: middle;
+  width: 35.49vw;
+  height: 35.49vw;
+  box-sizing: border-box;
   transform: rotateZ(-11deg);
+  transition: transform .3s ease-out, margin .3s ease-out;
+  transform-origin: bottom left;
+}
+
+.author-post__first-article__img {
+  margin-left: 21px;
+}
+
+.author-post__img {
+  margin-left: 16px;
+}
+
+.article-posts__img {
+  margin-left: 12px;
+}
+
+
+
+.author-post__img:hover {
+  transform: rotateZ(0deg);
+  margin-left: 0px;
+  transition: transform .3s ease-out, margin .3s ease-out;
+
 }
 
 .author-post__img--border-4 {
@@ -723,27 +767,49 @@ html {
 
 .author-post__first-article__img {
   border: 5px solid var(--dark-red);
-  width: 38.313vw;
-  height: 38.313vw;
+  width: 41.44vw;
+  height: 41.44vw;
+  box-sizing: border-box;
 }
 
-.in-progress--bottom-shadow:after { /* Premier essai de box-shadow en-dessous de la première photo */
+.author-post__img__shadow {
+  display: inline-block;
+  height: 0px;
+}
+
+.author-post__img__shadow:after {
   content: " ";
-  position: absolute;
-  bottom: 15px;
-  left: -8px;
-  width: 200px;
-  height: .5%;
-  background-color: #d9d9d9;
-  border-radius: 50%;
+  width: 48.313vw;
   border-radius: 100%;
   height: 10px;
-  background: rgba(0,0,0, .6);
   background: radial-gradient(black, white);
   opacity: 1;
   -webkit-filter: blur(4px);
   transform: scale(1, .4);
-  bottom: -24px;
+
+  position: absolute;
+  left: -2px;
+  bottom: -6px;
+
+  transition: height .2s ease-out, width .4s ease-out;
+}
+
+.author-post__img__shadow:hover:after {
+  height: 0px;
+  width: 0px;
+  transition: height .2s ease-out, width .4s ease-out;
+}
+
+.author-post__img__shadow--40vw:after {
+  width: 40.313vw;
+  left: -2px;
+  bottom: -7px;
+}
+
+.author-post__img__shadow--29vw:after {
+  width: 29.2vw;
+  left: 0px;
+  bottom: -8px;
 }
 
 .author-post__header__second-part {
@@ -751,11 +817,11 @@ html {
   flex-shrink: 0;
   /* flex-basis: 354px; */
   flex-basis: 100%;
-  margin: 27px 0;
+  margin: 15px 0;
 }
 
 .author-post__other-article__header__second-part {
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .author-post__continue-reading {
@@ -766,7 +832,7 @@ html {
 .author-post__title {
   font-size: calc(4.54334rem - 51.63012px);
   /* margin: 15px 0; pour 2000px je suppose*/
-  margin: 10px 0;
+  margin: 7px 0;
 }
 
 .author-post__title__other-articles {
@@ -989,22 +1055,31 @@ html {
   font-weight: 700;  
 }
 
+html {
+ --image-size--article_post: 25.94vw;
+}
+
 .article-posts__img {
-  width: 75px;
-  height: 75px;
+  box-sizing: border-box;
+  width: var(--image-size--article_post);
+  height: var(--image-size--article_post);
   border-width: 4px;
-  vertical-align: top;
 }
 
 .article-posts__author-title-wrote {
   display: inline-block;
-  max-width: 175px;
+  /* max-width: 175px; */
+  /* max-width: calc(100% - 23.15vw - 12px); */
+  width: calc(100% - (((0.98480775301 + 0.17364817766) * (var(--image-size--article_post) + 8px)) 
+  + 10px));
   padding-top: 20px;
+  padding-top: 10px;
   padding-left: 10px;
+  vertical-align: top;
 }
 
 .article-posts__posts-title {
-  margin-top: 21px;
+  margin-top: 15px;
   margin-bottom: 18px;
   font-size: 21px;
 }
@@ -1261,9 +1336,7 @@ html {
 
 /*  Work in Progress */
 
-
-
-a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):active, h2:not(.promo-box__title):not(.family-grid-section__h2):not(.main-footer__title):active {
+a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.author-post__img__shadow):active, h2:not(.promo-box__title):not(.family-grid-section__h2):not(.main-footer__title):active {
   outline: 3px dotted #811d15;
 }
 
