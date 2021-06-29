@@ -1,0 +1,47 @@
+Notes Methodo
+
+Travailler par groupe d'éléments
+
+1. Faire l'élément en une seule classe
+2. Puis regarder les memes éléments sur la page
+3. Et séparer les propriétés en une classe générales avec les propriétés dont je suis sur qu'elles seront les memes
+4. Et mettre les propriétés spécifiques à ce cas dans une classe spécifique à ce cas
+
+
+
+1. Beaucoup d'espacement, ça fait une grande partie 
+
+Un élément trop espacé, il est tout seul, c'est pas agréable
+
+
+
+NAMINGS
+
+1. Les couleurs : Faire une classe par couleur sauf pour les boutons
+
+
+RESET
+
+a {} : Reset les a avec color: inherit, mais en laissant l'underline, avec une classe no underline.
+
+
+
+
+
+/* //MARK: ETAPES */
+
+0. Choisir les tailles, des font-sizes et line-height (et line-length), et les tailles des images
+1. Faire un groupe
+2. Faire chaque élément
+ 2.1 Faire les transform du groupe, ça change l'élément en question donc ça fait partie de l'élément
+ 2.2 Faire les box-shadow etc du groupe
+3. Faire l'espacement
+ 3.1 Faire l'espacement de chaque élément, ça sert à rien de faire l'espacement de quelques éléments si j'ai pas fini le groupe, parce que chaque espacement du groupe dépend des autres espacements.
+ 3.2 Et ça sert à rien de faire l'espacement si j'ai pas fixé mes font-sizes, pareil si j'ai besoin de changer une font-size et un espacement, il faudra que je change la font-size d'abord, je perdrais juste du temps à tester des espacements avant (ça vaut aussi pour les tailles d'image, pour la taille de n'importe quel élément en fait).
+4. Après un groupe fini, soit faire un autre groupe dans la meme version (mobile first par ex), soit faire la responsiveness du groupe fini.
+  4.1 Le groupe doit etre complètement fini avant de faire sa responsiveness, ça veut dire sizing (font-size ça en fait partie), shadows, transform, et espacements, avant la responsiveness du groupe
+  4.2 Si le groupe dont je veux faire la responsiveness dépend d'autres groupes, il faut que tous les groupes soient fini avant de faire la responsiveness (de l'ensemble du coup).
+
+
+Responsiveness vs Version (first) entière
+  Ça peut etre mieux de faire version first entière avant la responsiveness pour garder la meme activité, rester par exemple en mode "espacement et sizing", ou qu'en mode "responsiveness", plutot que d'alterner.

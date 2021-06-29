@@ -33,6 +33,20 @@
   color: white;
 }
 
+/* //MARK: Variables */
+
+html {
+  --size--large-photo: calc(12.5055vw + 92.5825px); /* 38.313vw à 320px */
+  --size--medium-photo:  113.557px; /* 35.49vw à 320px */
+  --size--little-photo: 84px; /* 25.94vw à 320px */
+  --size--shadow-large-photo: calc(13.2143vw + 105.314px); /* 48.313vw à 320px, 147.6px */
+  --size--shadow-medium-photo: 129px; /* 40.313 à 320px */
+  --size--shadow-little-photo: 93.4333px; /* 154.6 à 320px */
+  --size--wrapper-large-photo: 41.44vw; /* 41.44vw */
+  --cos-11: 0.98162718344; /* Pour les calculs en rapport avec l'inclinaison des photos */
+  --sin-11: 0.19080899537; /* Pour les calculs en rapport avec l'inclinaison des photos */
+}
+
 /* //MARK: Reset */
 
 /* 1. Correct the line height in all browsers. (for consistency in all browser more than the value) */
@@ -77,6 +91,8 @@ body {
  img {
   border-style: none;
 }
+
+
 
 /**
  * Show the overflow in IE.
@@ -179,6 +195,12 @@ button {
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../fonts/FiraCode-Regular.woff2') format("woff2"),
+  url('../fonts/FiraCode-Regular.woff') format("woff");
+}
+
 body {
   font-family: 'Elena', -apple-system,Arial, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -190,12 +212,13 @@ html {
 p {
   font-size: 1rem;
   line-height: calc(0.688236607vw + 1.27764682546em); /* Permet de faire une transition progressive pour la hauteur de ligne de 1.4 à 1.5 (et avec une largeur minimium d'écran de 320px) (mot-clé: CSS Locks). */
+  box-sizing: border-box;
   width: 100%;
 }
 
-p, .first-section__article {
-  width: 100%;
-}
+/* p, .first-section__article { */
+  /* width: 100%; */
+/* } */
 
 .secondary-nav__list li {
   line-height: 27.7px;
@@ -205,18 +228,24 @@ body {
   color:rgb(51, 51, 51)
 }
 
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: .87rem;
+  background-color:#f6f3f2;
+}
+
 /* 
 * 1. Fluid line-height en rapport à la largeur d'écran (plus la ligne est longue, moins l'effort pour aller à la ligne est facile
 * 2. Fluid font-size parce qu'on peut, pour plus de confort. (éventuellement un interet aussi si le lecteur est plus loin du texte).
 */
 
 @media (min-width: 32.5625rem) { /* min-width: 521px */
-  p, .first-section__articles {
-    width: 469px;
-  }
-  .first-section__articles {
-    margin: 0 auto;
-  }
+  /* p, .first-section__articles { */
+    /* width: 469px; */
+  /* } */
+  /* .first-section__articles { */
+    /* margin: 0 auto; */
+  /* } */
 }
 
 @media (min-width: 48rem) { /* min-width: 768px; */
@@ -227,7 +256,8 @@ body {
   p {
     line-height: 1.5em;
     /* width: calc(28.6959017035em + 16.2126627186px); Permets de maintenir une line length d'environ 66 à 68 charactères pour toute taille de font-size */
-    width: calc(26em + 1px); /* Permets de maintenir une line length d'environ 66 à 68 charactères pour toute taille de font-size */
+    /* width: calc(26em + 1px);  Permets de maintenir une line length d'environ 66 à 68 charactères pour toute taille de font-size */
+    /* width: 100%; */
   }
 
   .first-section__articles {
@@ -252,7 +282,7 @@ p {
 }
 
 .ff--Elena {
-  font-family: 'Elena', 'Times New Roman', serif; /*Times New Roman parce que c'est aussi serif et modern */
+  font-family: 'Elena', 'Times New Roman', serif; /* Times New Roman parce que c'est aussi serif et modern */
 }
 
 .light-grey {
@@ -346,7 +376,6 @@ html {
   align-items: center;
   flex-wrap: wrap;
 
-  height: 153.8px;
   padding: 14.4px;
   padding-top: 4.4px;
 
@@ -435,7 +464,7 @@ html {
 }
 
 .search-bar {
-  margin-top: 4px;
+  margin-top: 8px;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 289px;
@@ -468,13 +497,26 @@ html {
   padding: 1em .2em;
 }
 
+
 @media (min-width: 30.0625rem) { /* min-width: 481px; */
+  .first-header {
+    padding-top: 14.4px;
+  }
+
+  .search-bar {
+    margin-top: 0;
+  }
+  
   .main-nav-buttons {
     flex-grow: 2;
   }
 
   .secondary-nav {
     order: 1;
+  }
+
+  .main-footer__img-bird {
+    display: none;
   }
 }
 
@@ -632,7 +674,8 @@ html {
 /* //MARK : Sub-Navbar */
 
 .subnav {
-  box-shadow: 0 4px 20px 0 rgba(0,0,0,.12);
+  /* box-shadow: 0 4px 20px 0 rgba(0,0,0,.12); Changé le Lundi 28 Juin pour */
+  box-shadow: 0px 10px 10px 0 rgba(197,211,217,.86);
 }
 
 .subnav-list {
@@ -695,14 +738,14 @@ html {
 /* //MARK: Author-Post */
 
 .first-section__articles {
-  margin: 60px auto;
+  margin: 80px auto;
   width: 85%;
 }
 
 .first-section__article {
   /* margin-bottom: 40px; taille du lundi 21 juin*/
   margin-bottom: 25px;
-  width: 94.44%
+  /* width: 94.44% Retiré parce que la largeur des articles (ici articles 2 et 3) doit etre à 100% (Dimanche 27 Juin) */
 }
 
 .first-section__first-article {
@@ -719,21 +762,22 @@ html {
   position: relative;
   display: inline-block;
   /* max-width: 300px; */
-  height: min-content;
-  width: min-content;
   border-radius: 10%;
 }
 
-.img-wrapper {
-  height: 41.44vw;
+.img-wrapper--large {
+  height: var(--size--large-photo);
+  width: var(--size--large-photo);
 }
 
 .img-wrapper--35vw {
-  height: 35.49vw;
+  height: var(--size--medium-photo);
+  width: var(--size--medium-photo);
 }
 
 .img-wrapper--75px {
-  height: var(--image-size--article_post);
+  height: var(--size--little-photo);
+  width: initial;
 }
 
 .img-wrapper:active {
@@ -746,8 +790,8 @@ html {
   /* margin-bottom: 1.25rem; */
   border: 3px solid var(--dark-red);
   border-radius: 10%;
-  width: 35.49vw;
-  height: 35.49vw;
+  width: var(--size--medium-photo);
+  height: var(--size--medium-photo);
   box-sizing: border-box;
   transform: rotateZ(-11deg);
   transition: transform .3s ease-out, margin .3s ease-out;
@@ -766,13 +810,10 @@ html {
   margin-left: 12px;
 }
 
-
-
 .author-post__img:hover {
   transform: rotateZ(0deg);
   margin-left: 0px;
   transition: transform .3s ease-out, margin .3s ease-out;
-
 }
 
 .author-post__img--border-4 {
@@ -781,8 +822,8 @@ html {
 
 .author-post__first-article__img {
   border: 5px solid var(--dark-red);
-  width: 41.44vw;
-  height: 41.44vw;
+  width: var(--size--large-photo);
+  height: var(--size--large-photo);
   box-sizing: border-box;
 }
 
@@ -793,7 +834,7 @@ html {
 
 .author-post__img__shadow:after {
   content: " ";
-  width: 48.313vw;
+  width: var(--size--shadow-large-photo);
   border-radius: 100%;
   height: 10px;
   background: radial-gradient(black, white);
@@ -815,43 +856,50 @@ html {
 }
 
 .author-post__img__shadow--40vw:after {
-  width: 40.313vw;
+  width: var(--size--shadow-medium-photo);
   left: -2px;
   bottom: -7px;
 }
 
 .author-post__img__shadow--29vw:after {
-  width: 29.2vw;
+  width: var(--size--shadow-little-photo);
   left: 0px;
   bottom: -8px;
 }
 
-.author-post__header__second-part {
-  flex-grow: 1;
-  flex-shrink: 0;
-  /* flex-basis: 354px; */
-  flex-basis: 100%;
-  margin: 15px 0;
+.first-author-post__header__text {
+  /* display: inline-block; Pas besoin avec flex, le block ira pas à la ligne */
+  margin-top: -25px;
+  margin: calc(1.787vw + 9.2857px)  0;
 }
 
-.author-post__other-article__header__second-part {
+.person-of-the-week__text {
+  width: 100%;
+  margin: calc(1.787vw + 9.2857px)  0;
+}
+
+.author-post__other-article__header__text {
   margin: 12px 0;
+  flex-basis: 400.75px;
+  flex-grow: 1;
 }
 
 .author-post__continue-reading {
-  margin: 2px 0;
-  line-height: 3.5;
+  line-height: calc(4.85118vw + 42.8929px);
 }
 
 .author-post__title {
-  font-size: calc(4.54334rem - 51.63012px);
+  /* font-size: calc(4.54334rem - 51.63012px); */
   /* margin: 15px 0; pour 2000px je suppose*/
   margin: 7px 0;
 }
 
+.first-author-post__title {
+  font-size: calc(1.2996vw + 25.9913px);
+}
+
 .author-post__title__other-articles {
-  /* font-size: calc(3.44351rem - 38.4545px); */
-  font-size: 21px;
+  font-size: calc(1.13095238095vw + 17.380952381px);
 }
 
 .author-post__time {
@@ -862,6 +910,66 @@ html {
 
 .link-decoration--none {
   text-decoration: none;
+}
+
+
+
+/* @media (min-width: 650px) {
+  .first-section__articles {
+    margin-top: 35px;
+  }
+
+  .first-author-post__header__text {
+    margin-left: 45px;
+    flex-basis: 336px;
+    flex-grow: 1;
+  }
+
+  .first-author-post__title {
+    margin: 24px 0;
+  }
+
+  .author-post__header__first-part {
+    margin-bottom: 25px;
+  }
+
+  
+
+  .first-author-post__header {
+    height: calc(var(--size--large-photo) + 45px);
+  }
+
+} */
+
+@media (min-width: 651px) {
+
+  /* First Section */
+
+  .first-section__articles {
+    margin-top: 100px;
+  }
+
+  /*  First Section - First Article */
+
+  .first-author-post__header {
+    margin-bottom: 40px;
+  }
+
+  .first-author-post__title {
+    margin: 18px 0;
+  }
+
+  .first-author-post__header__text {
+    margin: -26px 0 0 45px;
+    flex-basis: 336px;
+    flex-grow: 1;
+  }
+
+  /* First Section - Others Articles */
+  .author-post__other-article__header__text {
+    margin-left: 38px;
+    margin-top: -14px;
+  }
 }
 
 /* //MARK: Cards */
@@ -1069,26 +1177,22 @@ html {
   font-weight: 700;  
 }
 
-html {
- --image-size--article_post: 25.94vw;
-}
-
 .article-posts__img {
   box-sizing: border-box;
-  width: var(--image-size--article_post);
-  height: var(--image-size--article_post);
+  width: var(--size--little-photo);
+  height: var(--size--little-photo);
   border-width: 4px;
 }
 
 .article-posts__author-title-wrote {
   display: inline-block;
+  box-sizing: border-box;
   /* max-width: 175px; */
   /* max-width: calc(100% - 23.15vw - 12px); */
-  width: calc(100% - (((0.98480775301 + 0.17364817766) * (var(--image-size--article_post) + 8px)) 
-  + 10px));
-  padding-top: 20px;
+  /* width: calc(100% - ((var(--cos-11) + var(--sin-11)) * (var(--size--little-photo)))); */
+  width: calc(100% - (var(--size--little-photo) + 12px) * var(--cos-11) - 3px); /* Les 3px c'est une imprécision à cause due certainement au transform-origin */
   padding-top: 10px;
-  padding-left: 10px;
+  padding-left: 15px;
   vertical-align: top;
 }
 
@@ -1107,6 +1211,48 @@ html {
   width: .8em;
 }
 
+@media (min-width: 601px) {
+  .first-author-post__header__text {
+    margin: 20px 0;
+  }
+
+  .author-post__continue-reading {
+    line-height: 4;
+  }
+
+  .articles-section {
+    --mt-author-title-wrote: -20px;
+    --mt-posts-title: calc(var(--mt-author-title-wrote) - 60px);
+    --mt-posts-text: calc(var(--mt-author-title-wrote) - 14px);
+  }
+
+  .article-posts__author-title-wrote {
+    padding-top: 0;
+    margin-top: var(--mt-author-title-wrote);
+  }
+
+  .article-posts__posts-title {
+    margin-top: var(--mt-posts-title);
+  }
+
+  .article-posts__text {
+    margin-top: var(--mt-posts-text);
+  }
+
+  .article-posts__posts-title, .article-posts__text {
+    padding-left: 110px;
+  }
+
+  .article-posts__meta {
+    margin-top: 5px;
+    padding-left: 94px;
+  }
+
+  .author-post__img:hover {
+    margin-right: 12px; /* L'img-wrapper change de taille, et ça rapproche l'author-title. */
+  }
+}
+
 /* //MARK: ... Promo-box--community */
 
 .promo-box--community, .promo-box--books {
@@ -1117,7 +1263,8 @@ html {
   background-color: #18a46f;
 }
 
-/* src="media/huella-del-gato.svg" */
+
+
 /* TODO: Voir si je peux faire le bleu du bas rond soit confondu avec le bleu du container  */
 
 
@@ -1142,26 +1289,26 @@ html {
 }
 
 .promo-box--books {
-  padding-bottom: 95.814px;
+  padding-bottom: 95px;
 }
 
 .promo-box--workshops {
   background-color: #e7f8ff;
-  padding-bottom: 42px;
+  padding-bottom: 57px;
 }
 
 .promo-box--jobs {
-  padding-bottom: 75.347px;
+  padding-bottom: 79px;
   background-color: #ffe5e2;
 }
 
 .promo-box--membership {
-  padding-bottom: 52.58px;
+  padding-bottom: 42px;
   background-color: #e3f7e5;
 }
 
 .promo-box--newsletter-family {
-  padding-bottom: 52.58px;
+  padding-bottom: 67px;
   background-color: #fdffe5;
 }
 
@@ -1272,6 +1419,7 @@ html {
 }
 
 .main-footer__container {
+  position: relative;
   padding-top: 50px;
 }
 
@@ -1336,15 +1484,19 @@ html {
 }
 
 .main-footer__img-cat {
-  width: 64%;
+  /* width: 64%; L'image ne doit pas grandir quand l'écran s'élargit, mais elle doit garder la taille qu'elle a en 320px */
+  width: 174.067px;
   margin-left: -12px;
   margin-top: 9px;
 }
 
 .main-footer__img-bird {
-  width: 60%;
-  margin-left: -44px;
-  margin-right: -51px;
+  /* width: 60%;L'image ne doit pas grandir quand l'écran s'élargit, mais elle doit garder la taille qu'elle a en 320px */
+
+  width: 163.2px;
+  position: absolute;
+  right: -13px;
+  bottom: 4px;
 }
 
 
