@@ -749,7 +749,7 @@ html {
 }
 
 .first-section__first-article {
-  margin-bottom: 50px;
+  margin-bottom: 77px;
 }
 
 .author-post__header {
@@ -1223,7 +1223,7 @@ html {
   .articles-section {
     --mt-author-title-wrote: -20px;
     --mt-posts-title: calc(var(--mt-author-title-wrote) - 60px);
-    --mt-posts-text: calc(var(--mt-author-title-wrote) - 14px);
+    --mb-posts-title: calc(var(--mt-author-title-wrote) - 14px);
   }
 
   .article-posts__author-title-wrote {
@@ -1235,8 +1235,8 @@ html {
     margin-top: var(--mt-posts-title);
   }
 
-  .article-posts__text {
-    margin-top: var(--mt-posts-text);
+  .author-post__header {
+    margin-bottom: var(--mb-posts-title);
   }
 
   .article-posts__posts-title, .article-posts__text {
