@@ -880,7 +880,7 @@ html {
 
 .author-post__other-article__header__text {
   margin: 12px 0;
-  flex-basis: 400.75px;
+  /* flex-basis: 400.75px; */
   flex-grow: 1;
 }
 
@@ -941,36 +941,7 @@ html {
 
 } */
 
-@media (min-width: 651px) {
 
-  /* First Section */
-
-  .first-section__articles {
-    margin-top: 100px;
-  }
-
-  /*  First Section - First Article */
-
-  .first-author-post__header {
-    margin-bottom: 40px;
-  }
-
-  .first-author-post__title {
-    margin: 18px 0;
-  }
-
-  .first-author-post__header__text {
-    margin: -26px 0 0 45px;
-    flex-basis: 336px;
-    flex-grow: 1;
-  }
-
-  /* First Section - Others Articles */
-  .author-post__other-article__header__text {
-    margin-left: 38px;
-    margin-top: -14px;
-  }
-}
 
 /* //MARK: Cards */
 
@@ -994,6 +965,7 @@ html {
 }
 
 .btn--card {
+  max-width: 300px;
   color: white;
   font-weight: 700;
   padding: 16.5px 28px;
@@ -1051,7 +1023,15 @@ html {
 }
 
 .promo-box__form, .promo-box-btn {
-  margin: 20px 0 25px 0;
+  margin: 20px auto 25px;
+}
+
+.promo-box-btn {
+  display: block;
+}
+
+.promo-box__form {
+  max-width: 350px;
 }
 
 /* TODO: btn--card--books */
@@ -1085,6 +1065,7 @@ html {
 }
 
 .promo-box--newsletter__button {
+  max-width: 100%;
   background-color: #0168b8;
 }
 
@@ -1125,6 +1106,7 @@ html {
 
 .card-guide__button {
   margin-top: 25px;
+  max-width: max-content;
   text-align: center;
   color: white;
 }
@@ -1332,7 +1314,7 @@ html {
 }
 
 .conf-panel--bg-dark-blue {
-  background-color: #1b71bb;
+  background-image: linear-gradient(#1b71bb 45%,#4399d9 100%);;
 }
 
 .conf-panel__subtitle {
@@ -1359,6 +1341,7 @@ html {
 .btn--conf-panel {
   cursor: pointer;
   margin: 40px 0;
+  max-width: 400px;
   background-color: white;
   color: #277ecc;
 }
@@ -1509,9 +1492,9 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 /* //MARK: Media Queries */
 
 @media (min-width: 601px) {
-  .first-author-post__header__text {
+  /* .first-author-post__header__text {
     margin: 20px 0;
-  }
+  } */
 
   .author-post__continue-reading {
     line-height: 4;
@@ -1551,5 +1534,46 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 
   .conf-panel__title-text {
     font-size: calc(1.06224vw + 28.7553px);
+  }
+}
+
+
+@media (min-width: 650px) {
+
+  /* First Section */
+
+  .first-section__articles {
+    margin-top: 100px;
+  }
+
+  /*  First Section - First Article */
+
+  .first-author-post__header {
+    margin-bottom: 40px;
+  }
+
+  .first-author-post__title {
+    margin: 18px 0;
+  }
+
+  .first-author-post__header__text {
+    /* margin: -26px 0 0 45px; */
+    margin-top: -37px;
+    padding-left: 35px;
+    flex-basis: 336px;
+    flex-grow: 1;
+  }
+
+  /* First Section - Others Articles */
+  .author-post__other-article__header__text {
+    /* margin-left: 38px; */
+    /* margin-top: -14px; */
+    margin-top: -10px;
+    padding-left: 30px;
+    flex-basis: 438.95px;
+  }
+
+  .first-section__article {
+    margin-bottom: 50px;
   }
 }
