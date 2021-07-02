@@ -168,17 +168,21 @@
           </article>
         </section>
         <section class="card promo-box promo-box--newsletter"> <!--promo-box-->
-          <a href="#"><img class="promo-box__img" src="media/cat-in-the-chair.svg"></a>
-          <a class="promo-box__email color--dark-red style--bold ff--Mija">Email Newsletter</a>
-          <h2 class="promo-box__title ff--Elena">Useful front-end & UX tips, delivered once a week.</h2>
-          <p class="ff--Elena">With tools to help you get your work done better. Subscribe and get Vitaly’s <a class="color--blue style--bold" href="#">Smart Interface Design Checklists PDF</a> — in your inbox. 🎁</p>
-          <form class="promo-box__form">
-            <div class="ff--Elena promo-box__input-wrapper">
-              <input class="promo-box__input" placeholder="Your email">
-            </div>
-            <button class="btn--card promo-box--newsletter__button ff--Mija">Meow!</button>
-          </form>
-          <em class="promo-box__footer ff--Elena light-grey">On <a href="#">front-end & UX</a>. Trusted by 190.000 folks. </em>
+          <section>
+            <a href="#"><img class="promo-box__img" src="media/cat-in-the-chair.svg"></a>
+          </section>
+          <section class="promo-box__body">
+            <a class="promo-box__email color--dark-red style--bold ff--Mija">Email Newsletter</a>
+            <h2 class="promo-box__title ff--Elena">Useful front-end & UX tips, delivered once a week.</h2>
+            <p class="ff--Elena">With tools to help you get your work done better. Subscribe and get Vitaly’s <a class="color--blue style--bold" href="#">Smart Interface Design Checklists PDF</a> — in your inbox. 🎁</p>
+            <form class="promo-box__form">
+              <div class="ff--Elena promo-box__input-wrapper">
+                <input class="promo-box__input" placeholder="Your email">
+              </div>
+              <button class="btn--card promo-box--newsletter__button ff--Mija">Meow!</button>
+            </form>
+            <em class="promo-box__footer ff--Elena light-grey">On <a href="#">front-end & UX</a>. Trusted by 190.000 folks. </em>
+          </section>
         </section>
       </section>
       <section class="second-section ff--Mija"> <!--Section des cards-guides-->
@@ -333,11 +337,15 @@
       </section>
       <section> <!--Section pour la community-box (avec une publicité quand l'écran est assez grand)-->
         <article class="card promo-box promo-box--community">
-          <a href="#"><img class="promo-box__img" src="media/highlight-member.svg"></a>
-          <h2 class="promo-box__title ff--Elena">Join 2,031 Smashing Members</h2>
-          <p class="ff--Elena">A <strong>friendly community</strong> for people who design and build the web. With books, workshops, goodies and early-birds — for just 1 coffee a month. <a class="color--blue" href="#">Take a look around.</a></p>
-          <a class="btn--card promo-box-btn promo-box--community__button ff--Mija">Join the community<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
-          <em class="promo-box__footer ff--Elena light-grey">Already have an account? <a href="#">Sign in!</a></em>
+          <section>
+            <a href="#"><img class="promo-box__img" src="media/highlight-member.svg"></a>
+          </section>
+          <section class="promo-box__body">
+            <h2 class="promo-box__title ff--Elena">Join 2,031 Smashing Members</h2>
+            <p class="ff--Elena">A <strong>friendly community</strong> for people who design and build the web. With books, workshops, goodies and early-birds — for just 1 coffee a month. <a class="color--blue" href="#">Take a look around.</a></p>
+            <a class="btn--card promo-box-btn promo-box--community__button ff--Mija">Join the community<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
+            <em class="promo-box__footer ff--Elena light-grey">Already have an account? <a href="#">Sign in!</a></em>
+          </section>
         </article>
       </section>
       <section class="articles-section ff--Mija">  <!--Section avec 4 articles en plus -->
@@ -454,41 +462,62 @@
           <h2 class="family-grid-section__h2">That’s The Smashing Family.</h2>
           <h2 class="family-grid-section__h2 color--dark-red">Smashing Magazine is so much more than articles.</h2>
         </header>
+        
         <section class="family-grid-carousel">
           <article class="card promo-box promo-box--family promo-box--books">
-            <a href="#"><img class="promo-box__img" src="media/cat-family-books.svg"></a>
-            <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Books</h2>
-            <p class="ff--Elena"><strong>14 printed books</strong> and <strong>67 eBooks</strong>. Written for web developers, designers and marketeers.</p>
-            <a class="btn--card btn--card--books promo-box-btn promo-box--community__button ff--Mija">Jump to books<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
-            <em class="promo-box__footer ff--Elena light-grey">Free arimail shipping worlwide. No ifs or buts.</em>
+            <section>
+              <a href="#"><img class="promo-box__img" src="media/cat-family-books.svg"></a>
+            </section>
+            <section  class="promo-box__body">
+              <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Books</h2>
+              <p class="ff--Elena"><strong>14 printed books</strong> and <strong>67 eBooks</strong>. Written for web developers, designers and marketeers.</p>
+              <a class="btn--card btn--card--books promo-box-btn promo-box--community__button ff--Mija">Jump to books<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
+              <em class="promo-box__footer ff--Elena light-grey">Free arimail shipping worlwide. No ifs or buts.</em>
+            </section>
           </article>
           <article class="card promo-box promo-box--family promo-box--workshops">
-            <a href="#"><img class="promo-box__img" src="media/cat-family-workshops.svg"></a>
-            <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Workshops</h2>
-            <p class="ff--Elena">Online workshops with experts. Broken into 2.5h-segments, with interactive, live sessions.</p>
-            <a class="btn--card btn--card--workshops promo-box-btn promo-box--community__button ff--Mija">Jump to workshops<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
-            <em class="promo-box__footer ff--Elena light-grey">2.5h live sessions, with video recordings and Q&A</em>
+            <section>
+              <a href="#"><img class="promo-box__img" src="media/cat-family-workshops.svg"></a>
+            </section>
+            <section  class="promo-box__body">
+              <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Workshops</h2>
+              <p class="ff--Elena">Online workshops with experts. Broken into 2.5h-segments, with interactive, live sessions.</p>
+              <a class="btn--card btn--card--workshops promo-box-btn promo-box--community__button ff--Mija">Jump to workshops<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
+              <em class="promo-box__footer ff--Elena light-grey">2.5h live sessions, with video recordings and Q&A</em>
+            </section>
           </article>
           <article class="card promo-box promo-box--family promo-box--jobs">
-            <a href="#"><img class="promo-box__img" src="media/cat-family-job-board.svg"></a>
-            <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Job Board</h2>
-            <p class="ff--Elena">Helping designers and developers find great jobs, and connect with great companies.</p>
-            <a class="btn--card btn--card--jobs promo-box-btn  promo-box--community__button ff--Mija">Jump to jobs<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
-            <em class="promo-box__footer ff--Elena light-grey">Freelancers and full-time, in front-end &amp; UX.</em>
+            <section>
+              <a href="#"><img class="promo-box__img" src="media/cat-family-job-board.svg"></a>
+            </section>
+            <section  class="promo-box__body">
+              <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Job Board</h2>
+              <p class="ff--Elena">Helping designers and developers find great jobs, and connect with great companies.</p>
+              <a class="btn--card btn--card--jobs promo-box-btn  promo-box--community__button ff--Mija">Jump to jobs<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
+              <em class="promo-box__footer ff--Elena light-grey">Freelancers and full-time, in front-end &amp; UX.</em>
+            </section>
           </article>
           <article class="card promo-box promo-box--family promo-box--membership">
-            <a href="#"><img class="promo-box__img" src="media/cat-family-membership.svg"></a>
-            <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Memberships</h2>
-            <p class="ff--Elena">A friendly community for people who design and build the web. With discounts, goodies and fancy cats.</p>
-            <a class="btn--card btn--card--membership promo-box-btn promo-box--community__button ff--Mija">Jump to Membership<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
-            <em class="promo-box__footer ff--Elena light-grey">For just 1 coffee a month.</em>
+            <section>
+              <a href="#"><img class="promo-box__img" src="media/cat-family-membership.svg"></a>
+            </section>
+            <section  class="promo-box__body">
+              <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Memberships</h2>
+              <p class="ff--Elena">A friendly community for people who design and build the web. With discounts, goodies and fancy cats.</p>
+              <a class="btn--card btn--card--membership promo-box-btn promo-box--community__button ff--Mija">Jump to Membership<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
+              <em class="promo-box__footer ff--Elena light-grey">For just 1 coffee a month.</em>
+            </section>
           </article>
           <article class="card promo-box promo-box--family promo-box--newsletter-family">
-            <a href="#"><img class="promo-box__img" src="media/cat-family-mailman.svg"></a>
-            <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Newsletter</h2>
-            <p class="ff--Elena">Weekly tips on front-end &amp; UX, delivered straight to your inbox. Just practical stuff that you can use..</p>
-            <a class="btn--card btn--card--newsletter-family promo-box-btn promo-box--community__button ff--Mija">Jump to Newsletter<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
-            <em class="promo-box__footer ff--Elena light-grey">You can unsubscribe with 1 click any time.</em>
+            <section>
+              <a href="#"><img class="promo-box__img" src="media/cat-family-mailman.svg"></a>
+            </section>
+            <section  class="promo-box__body">
+              <h2 class="promo-box__title promo-box--family__title ff--Elena">Smashing Newsletter</h2>
+              <p class="ff--Elena">Weekly tips on front-end &amp; UX, delivered straight to your inbox. Just practical stuff that you can use..</p>
+              <a class="btn--card btn--card--newsletter-family promo-box-btn promo-box--community__button ff--Mija">Jump to Newsletter<img class="img--cat-paw img--cat-paw__promo-box--community" src="media/huella-del-gato--transparent.svg"></a>
+              <em class="promo-box__footer ff--Elena light-grey">You can unsubscribe with 1 click any time.</em>
+            </section>
           </article>
         </section>
       </section>

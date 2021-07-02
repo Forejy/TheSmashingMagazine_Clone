@@ -977,7 +977,6 @@ html {
 .card {
   box-sizing: border-box;
   border-radius: 10px;
-  padding: 0 28px;
   text-align: center;
 }
 
@@ -1016,9 +1015,14 @@ html {
 
 .promo-box__img {
   display: inline-block;
-  margin-top: -98px;
-  width: 90%;
+  /* margin-top: -98px; */
+  margin-top: -118px;
+  width: 250px;
   display: initial;
+}
+
+.promo-box__body {
+  padding: 0 28px;
 }
 
 .promo-box__email {
@@ -1289,12 +1293,12 @@ html {
 }
 
 .promo-box--books {
-  padding-bottom: 95px;
+  padding-bottom: 87px;
 }
 
 .promo-box--workshops {
   background-color: #e7f8ff;
-  padding-bottom: 57px;
+  padding-bottom: 56px;
 }
 
 .promo-box--jobs {
@@ -1350,8 +1354,16 @@ html {
   display: inline-block;
   vertical-align: top;
   width: 95%;
+  height: 530.683px;
+  height: calc(588.885px - 18.1883vw);
   margin-left: 1%;
   margin-right: 4%;
+}
+
+@media (min-width: 850px) {
+  .promo-box--family {
+    height: calc(588.885px - 18.1883vw); /* Diviser par 2 pour avoir 2 promo-box pour une largeur d'écran ? */
+  }
 }
 
 /* //MARK: Conf Panel */
