@@ -1215,48 +1215,6 @@ html {
   width: .8em;
 }
 
-@media (min-width: 601px) {
-  .first-author-post__header__text {
-    margin: 20px 0;
-  }
-
-  .author-post__continue-reading {
-    line-height: 4;
-  }
-
-  .articles-section {
-    --mt-author-title-wrote: -20px;
-    --mt-posts-title: calc(var(--mt-author-title-wrote) - 60px);
-    --mb-posts-title: calc(var(--mt-author-title-wrote) - 14px);
-  }
-
-  .article-posts__author-title-wrote {
-    padding-top: 0;
-    margin-top: var(--mt-author-title-wrote);
-  }
-
-  .article-posts__posts-title {
-    margin-top: var(--mt-posts-title);
-  }
-
-  .author-post__header {
-    margin-bottom: var(--mb-posts-title);
-  }
-
-  .article-posts__posts-title, .article-posts__text {
-    padding-left: 110px;
-  }
-
-  .article-posts__meta {
-    margin-top: 5px;
-    padding-left: 94px;
-  }
-
-  .author-post__img:hover {
-    margin-right: 12px; /* L'img-wrapper change de taille, et ça rapproche l'author-title. */
-  }
-}
-
 /* //MARK: ... Promo-box--community */
 
 .promo-box--community, .promo-box--books {
@@ -1389,6 +1347,7 @@ html {
 
 .conf-panel__title-text {
   font-size: calc(4.54334rem - 51.63012px);
+  font-size: calc(1.77936vw + 24.456px);
   border-bottom: 4px solid #4399d9;
   line-height: 1.25;
 }
@@ -1544,4 +1503,53 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 .conf-panel__title:active {
   margin: 3px 0 16px 0;
   padding: 2px 0 6px 0;
+}
+
+
+/* //MARK: Media Queries */
+
+@media (min-width: 601px) {
+  .first-author-post__header__text {
+    margin: 20px 0;
+  }
+
+  .author-post__continue-reading {
+    line-height: 4;
+  }
+
+  .articles-section {
+    --mt-author-title-wrote: -20px;
+    --mt-posts-title: calc(var(--mt-author-title-wrote) - 60px);
+    --mb-posts-title: calc(var(--mt-author-title-wrote) - 14px);
+  }
+
+  .article-posts__author-title-wrote {
+    padding-top: 0;
+    margin-top: var(--mt-author-title-wrote);
+  }
+
+  .article-posts__posts-title {
+    margin-top: var(--mt-posts-title);
+  }
+
+  .author-post__header {
+    margin-bottom: var(--mb-posts-title);
+  }
+
+  .article-posts__posts-title, .article-posts__text {
+    padding-left: 110px;
+  }
+
+  .article-posts__meta {
+    margin-top: 5px;
+    padding-left: 94px;
+  }
+
+  .author-post__img:hover {
+    margin-right: 12px; /* L'img-wrapper change de taille, et ça rapproche l'author-title. */
+  }
+
+  .conf-panel__title-text {
+    font-size: calc(1.06224vw + 28.7553px);
+  }
 }
