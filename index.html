@@ -197,8 +197,8 @@
               Reliable accessible UI components: <code>:focus</code> styles, content sliders, dark mode, date pickers, navigation, modals, radio buttons, “skip” links, SVGs, tabs, tables, toggles and tooltips.
             </p>
           <a class="btn--card card-guide__button btn--card card-guide__button--green">Explore Accessible Components</a>
-        </article>
-        <article class="card card-guide card-guide--orange">
+        </article><!--
+        --><article class="card card-guide card-guide--orange">
           <header class="card-guide__header">
             <span class="card-guide__subtitle light-grey ff--Elena">A Smashing Guide To</span>
             <h2 class="card-guide__title color--orange">
@@ -209,8 +209,8 @@
             Useful CSS tools for animations, border-radius, CSS shadows, cubic-bezier curves, easing gradients, filters, placeholders, CSS Grid, overlays, color shades, type scales and interactive CSS doodles.
           </p>
           <a class="btn--card card-guide__button btn--card card-guide__button--orange">Explore CSS Tools</a>
-        </article>
-        <article class="card card-guide card-guide--violet">
+        </article><!--
+        --><article class="card card-guide card-guide--violet">
           <header  class="card-guide__header">
             <span class="card-guide__subtitle light-grey ff--Elena">A Smashing Guide To</span>
             <h2 class="card-guide__title color--violet">
@@ -228,6 +228,7 @@
       </section>
       <section class="articles-section ff--Mija"> <!--Section des latest Posts-->
         <p class="article-posts__title ff--Elena">
+          <span class="black-line"></span>
           LATEST POSTS
         </p>
         <article class="article-posts-item">
@@ -537,28 +538,25 @@
           </article>
       </section>
       <section class="articles-section community-links-section">
-        <article class=" first-section__first-article">
+        <article class="first-section__first-article mb-90">
           <header>
             <p class="article-posts__title community-links__title ff--Elena">
+              <span class="black-line"></span>
               COMMUNITY LINKS
             </p>
           </header>
           <article>
-            <header>
-              <section>
-                <div class="img-wrapper">
-                  <a class="author-post__img__shadow link-decoration--none" href="#"><img class="author-post__img author-post__first-article__img" src="media/author/farai-madzima-250px-opt.png"></a>
-                </div>
-              </section>
-              <section class="person-of-the-week__text">
-                <div class="author-post__header__first-part">
+              <section class="img-wrapper img-wrapper--large img-wrapper--potw">
+                <a class="author-post__img__shadow link-decoration--none" href="#"><img class="author-post__img author-post__first-article__img" src="media/author/farai-madzima-250px-opt.png"></a>
+              </section><!--
+              --><section class="potw__text">
+                <div class="author-post__header__first-part person-of-the-week__title">
                   <span class="light-grey ff--Elena">PERSON OF THE WEEK</span>
                 </div>
+                <p class="ff--Elena">
+                  Farai Madzima (<a class="color--blue" href="https://twitter.com/heyfarai">@heyfarai</a>) is a Zimbabwean UX designer, manager, and speaker living in Canada. Before joining Shopify as a UX Lead, he led the experience design team at Standard Bank Group, Africa’s largest bank. Farai organizes the UX and design conference <a class="color--blue"  href="https://pixelup.co.za/">Pixel Up!</a>, an event that helps bridge the gap between designers and developers in Africa with those from around the world. Thank you for everything you do for the community, dear Farai!
+                  </p>
               </section>
-            </header>
-            <p class="ff--Elena">
-              Farai Madzima (<a class="color--blue" href="https://twitter.com/heyfarai">@heyfarai</a>) is a Zimbabwean UX designer, manager, and speaker living in Canada. Before joining Shopify as a UX Lead, he led the experience design team at Standard Bank Group, Africa’s largest bank. Farai organizes the UX and design conference <a class="color--blue"  href="https://pixelup.co.za/">Pixel Up!</a>, an event that helps bridge the gap between designers and developers in Africa with those from around the world. Thank you for everything you do for the community, dear Farai!
-              </p>
           </article>
         </article>
           <article class="article-posts-item">
@@ -698,7 +696,7 @@
           </p>
       </section>
     </main>
-    <section class="main-footer color--white">
+    <footer class="main-footer color--white">
       <article class="container-w85 main-footer__container">
         <header>
           <h2 class="main-footer__title">BROWSE ALL SMASHING MAGAZINE TOPICS</h2>
@@ -740,7 +738,7 @@
           <img class="main-footer__img-bird" src="media/footer/mobile__right.svg">
         </picture>
       </article>
-    </section>
+    </footer>
   </body>
   <script src="scripts/index.js"></script>
 </html>
