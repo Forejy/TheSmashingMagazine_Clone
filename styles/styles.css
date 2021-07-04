@@ -536,7 +536,13 @@ html {
     order: 1;
   }
 
-  .main-footer__img-bird {
+  .main-footer__img-left {
+    width: 174.067px;
+    height: 151.742421933px;
+    background-image: url('../media/footer/tablet__left.svg');
+  }
+
+  .main-footer__img-right {
     display: none;
   }
 }
@@ -1432,23 +1438,25 @@ html {
   transition: color .1s ease-out;
 }
 
-/* //MARK: Utilities */
-
-.my-0 {
-  margin-top: 0;
-  margin-bottom: 0;
+.main-footer__img {
+  display: inline-block;
 }
 
-.container-w85 {
-  margin: 0 auto;
-  width: 85%;
-}
-
-.main-footer__img-cat {
-  /* width: 64%; L'image ne doit pas grandir quand l'écran s'élargit, mais elle doit garder la taille qu'elle a en 320px */
+.main-footer__img-left {
   width: 174.067px;
+  height: 153.576230029px;
   margin-left: -12px;
   margin-top: 9px;
+  background-image: url('../media/footer/mobile__left.svg');
+}
+
+.main-footer__img-right {
+  width: 163.2px;
+  height: 112.693977979px;
+  background: url('../media/footer/mobile__right.svg');
+  position: absolute;
+  right: -13px;
+  bottom: 4px;
 }
 
 .main-footer__img-bird {
@@ -1460,6 +1468,17 @@ html {
   bottom: 4px;
 }
 
+/* //MARK: Utilities */
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container-w85 {
+  margin: 0 auto;
+  width: 85%;
+}
 
 /*  Work in Progress */
 
@@ -1501,6 +1520,19 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 @media (min-width: 469px) {
   .card-guide__button {
     margin-top: 32px;
+  }
+}
+
+@media (min-width: 30.0625rem) { /* min-width: 481px; */
+  .main-footer__img-left {
+    margin-left: -23px;
+    width: 174.067px;
+    height: 151.742421933px;
+    background-image: url('../media/footer/tablet__left.svg');
+  }
+
+  .main-footer__img-right {
+    display: none;
   }
 }
 
@@ -1645,6 +1677,24 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
   }
 }
 
-@media (min-width: 850px) {
+
+@media (min-width: 1024px) {
+  .main-footer__img-left {
+    width: 166.443px;
+    height: 189.925849665px;
+    background-image: url('../media/footer/laptop__left.svg');
+  }
+
+  .main-footer__img-right {
+    border: none;
+    width: 211.837px;
+    height: 139.376px;
+    background-repeat: no-repeat;
+    background-image: url('../media/footer/laptop__right.svg');
+    /* background-size: 200px; */
+    /* background-size: 100%; */
+    /* background-size: contain; */
+    /* background-size: cover; */
+  }
 
 }
