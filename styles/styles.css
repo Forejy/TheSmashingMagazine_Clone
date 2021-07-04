@@ -1002,15 +1002,13 @@ html {
 /* //MARK: Promo-box */
 
 .promo-box {
-  margin: 180px auto;
-  margin-bottom: 0;
+  margin: 180px auto 0;
   width: 90%;
   padding-bottom: 30px;
 }
 
 .promo-box__img {
   display: inline-block;
-  /* margin-top: -98px; */
   margin-top: -118px;
   width: 250px;
   display: initial;
@@ -1255,27 +1253,19 @@ html {
   margin-top: 35px;
 }
 
-.promo-box--books {
-  padding-bottom: 87px;
-}
-
 .promo-box--workshops {
   background-color: #e7f8ff;
-  padding-bottom: 56px;
 }
 
 .promo-box--jobs {
-  padding-bottom: 79px;
   background-color: #ffe5e2;
 }
 
 .promo-box--membership {
-  padding-bottom: 42px;
   background-color: #e3f7e5;
 }
 
 .promo-box--newsletter-family {
-  padding-bottom: 67px;
   background-color: #fdffe5;
 }
 
@@ -1300,9 +1290,10 @@ html {
 }
 
 .family-grid-carousel {
-  width: 90%;
+  display: flex;
   margin: 0 auto;
   padding-bottom: 20px;
+  width: 90%;
   overflow-x: scroll;
   white-space: nowrap;
   border-right: 10px solid;
@@ -1314,18 +1305,16 @@ html {
 }
 
 .promo-box--family {
-  display: inline-block;
-  vertical-align: top;
-  width: 95%;
-  height: 530.683px;
-  height: calc(588.885px - 18.1883vw);
+  flex: 95% 0 0;
   margin-left: 1%;
   margin-right: 4%;
 }
 
 @media (min-width: 850px) {
+
   .promo-box--family {
-    height: calc(588.885px - 18.1883vw); /* Diviser par 2 pour avoir 2 promo-box pour une largeur d'écran ? */
+    /* height: calc(588.885px - 18.1883vw); /* Diviser par 2 pour avoir 2 promo-box pour une largeur d'écran ? */
+    flex-basis: 45%; /* w95/2 - ml1 - mr4 */
   }
 }
 
@@ -1657,5 +1646,5 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 }
 
 @media (min-width: 850px) {
-  
+
 }
