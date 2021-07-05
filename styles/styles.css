@@ -1675,6 +1675,10 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
   .main-footer__title, .main-footer__list-item {
     font-size: calc(0.73051948vw + 12.3896103896px);
   }
+
+  .mb-90 {
+    margin-bottom: 90px;
+  }
 }
 
 @media (min-width: 792px) {
@@ -1704,4 +1708,27 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
     background-image: url('../media/footer/laptop__right.svg');
     bottom: 41px;
   }
+
+  .articles-section {
+    --articles-gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .article-posts-item {
+    flex-basis: calc((100% - var(--articles-gap))/2);
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-bottom: 85px;
+  }
+
+  .article-posts-item__gap {
+    margin-right: var(--articles-gap);
+  }
+
+  .article-posts__meta {
+    margin-top: 20px;
+    padding-left: 109px;
+  }
+    
 }
