@@ -1226,6 +1226,15 @@ html {
 
 /* //MARK: ... Promo-box--community */
 
+.sponsor {
+  display: none;
+}
+
+.promo-box--community {
+  margin: 180px 0;
+  width: 100%;
+}
+
 .promo-box--community, .promo-box--books {
   background-color: #f1fdf8;
 }
@@ -1660,7 +1669,6 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
   }
 }
 
-
 @media (min-width: 768px) {
   .main-footer__list {
     text-align: center;
@@ -1678,6 +1686,22 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 
   .mb-90 {
     margin-bottom: 90px;
+  }
+
+  .articles-section {
+    margin: 140px auto;
+  }
+
+  .first-section {
+    margin-bottom: 140px;
+  }
+
+  .promo-box--newsletter {
+    margin-top: 200px; /* -118px mt pour la promo-box__img */
+  }
+
+  .family-grid-section {
+    margin-bottom: 80px;
   }
 }
 
@@ -1731,4 +1755,81 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
     padding-left: 109px;
   }
     
+}
+
+@media (min-width: 1100px) {
+  .sponsor {
+    display: block;
+    width: 400px;
+
+    flex : calc((100% - var(--articles-gap))/2) 0 1;
+    align-self: center;
+
+    text-align: center;
+  }
+
+  .sponsor__subtitle {
+    margin-bottom: 15px;
+
+    font-size: 11px;
+  }
+
+  .sponsor__body {
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    background-color: #dee2f4;
+    padding: 25px 20px 15px;
+
+    color: #393d4e;
+    font-size: 14px;
+  }
+
+  .sponsor__logo {
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .sponsor__title {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .sponsor__text {
+    font-size: inherit;
+  }
+
+  .btn--sponsor {
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 8px 14px;
+    box-sizing: border-box;
+    width: max-content;
+    background-color: #4358d8;
+
+    color: #f1f2fc;
+    text-decoration: none;
+    font-size: 12px;
+
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  }
+
+  .btn--sponsor:hover {
+    color: #fbfcff;
+    background-color: #5882f7;
+
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  }
+
+  .promo-box--community {
+    margin: 0;
+    flex : calc((100% - var(--articles-gap))/2) 0 1;
+  }
+
+  .sponsors-section {
+    margin-bottom: 160px; /* -20px mt pour article-posts__author-title-wrote */
+  }
 }
