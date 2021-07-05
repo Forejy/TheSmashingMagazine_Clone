@@ -1754,7 +1754,19 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
     margin-top: 20px;
     padding-left: 109px;
   }
-    
+
+  .article-posts__title {
+    transform: rotateZ(90deg);
+    transform-origin: left;
+    margin-bottom: 4px;
+    margin-left: -40px;
+  }
+
+  .community-links__title {
+    transform: rotateZ(90deg) translateX(-180px);
+    margin-bottom: 4px;
+    margin-left: -55px;
+  }
 }
 
 @media (min-width: 1100px) {
