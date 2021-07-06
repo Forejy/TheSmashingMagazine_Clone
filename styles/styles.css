@@ -380,6 +380,11 @@ html {
 
 /* //MARK: Layout */
 
+.first-section {
+  margin: 0 auto;
+  width: 90%;
+}
+
 .second-section {
   margin: 60px auto;
   width: 90%;
@@ -766,7 +771,7 @@ html {
 
 .first-section__articles {
   margin: 80px auto;
-  width: 85%;
+  width: 94.4444%;
 }
 
 .first-section__article {
@@ -1088,6 +1093,8 @@ html {
 /* //MARK: ... Promo-box--newsletter  */
 
 .promo-box--newsletter {
+  margin: 180px 0 0;
+  width: 100%;
   background-color: #e7f8ff;
 }
 
@@ -1655,30 +1662,29 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 
 @media (min-width: 701px) {
   .second-section {
+    --gap: 30px;
+
     display: flex;
     flex-wrap: wrap;
+    gap: var(--gap);
   }
 
   .card-guide {
-    --gap: 30px;
-    display: inline-block;
     flex: calc(50% - (var(--gap) / 2)) 0 0;
-    vertical-align: top;
-  }
-
-  .card-guide--green {
-    margin-right: var(--gap);
   }
 
   .see-more-wrapper {
     width: 100%;
   }
-
 }
 
 
 
 @media (min-width: 768px) {
+  .second-section {
+    width: 85%;
+  }
+
   .main-footer__list {
     text-align: center;
   }
@@ -1859,19 +1865,22 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
   .first-section {
     display: flex;
     margin: 40px auto 140px;
-    width: 90%;
+    width: 85%;
   }
 
   .first-section__articles {
     margin-bottom: 0px;
+    flex-shrink: 1;
   }
 
   .promo-box--newsletter {
-    margin-top: 174px;
-    flex-basis: 35%;
+    margin: 174px 0 0 56px;
+    flex: 31% 0 0;
   }
+}
 
-  .first-section__articles {
-    margin-right: 50px;
+@media (min-width: 1344px) {
+  .card-guide {
+    flex: 347px 1 0;
   }
 }
