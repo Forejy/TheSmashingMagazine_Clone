@@ -1804,11 +1804,13 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
   .sponsor__body {
     box-sizing: border-box;
     border: 1px solid #ddd;
-    background-color: #dee2f4;
     padding: 25px 20px 15px;
 
     color: #393d4e;
     font-size: 14px;
+
+    background: linear-gradient(-30deg, #dadff3E5, #dadff3E5 45%, #dadff3 45%) #fff;
+
   }
 
   .sponsor__logo {
