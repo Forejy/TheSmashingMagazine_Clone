@@ -1483,15 +1483,6 @@ html {
   bottom: 4px;
 }
 
-.main-footer__img-bird {
-  /* width: 60%;L'image ne doit pas grandir quand l'écran s'élargit, mais elle doit garder la taille qu'elle a en 320px */
-
-  width: 163.2px;
-  position: absolute;
-  right: -13px;
-  bottom: 4px;
-}
-
 /* //MARK: Utilities */
 
 .my-0 {
@@ -1900,5 +1891,21 @@ a:not(h2 a):not(.subnav-item a):not(.promo-box__email):not(.btn--card):not(.auth
 
   .promo-box--family {
     flex-basis: 28%;
+  }
+}
+
+
+@media (min-width: 1450px) {
+  .main-footer__img-left {
+    width: 196.135px;
+    background-image: url(../media/footer/large-screen__left.svg);
+    background-repeat: no-repeat;
+
+    bottom: 25px;
+    left: 103px;
+  }
+
+  .main-footer__img-right {
+    display: none;
   }
 }
