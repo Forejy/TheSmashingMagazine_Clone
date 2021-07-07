@@ -43,6 +43,8 @@ html {
   --size--shadow-medium-photo: 129px; /* 40.313 à 320px */
   --size--shadow-little-photo: 93.4333px; /* 154.6 à 320px */
   --size--wrapper-large-photo: 41.44vw; /* 41.44vw */
+  --max-size--large-photo: 280px;
+  --max-size--shadow-large-photo: 303.517px;
   --cos-11: 0.98162718344; /* Pour les calculs en rapport avec l'inclinaison des photos */
   --sin-11: 0.19080899537; /* Pour les calculs en rapport avec l'inclinaison des photos */
 }
@@ -806,6 +808,8 @@ html {
 .img-wrapper--large {
   height: var(--size--large-photo);
   width: var(--size--large-photo);
+  max-width: var(--max-size--large-photo);
+  max-height: var(--max-size--large-photo);
 }
 
 .img-wrapper--35vw {
@@ -861,6 +865,8 @@ html {
 .author-post__first-article__img {
   border: 5px solid var(--dark-red);
   width: var(--size--large-photo);
+  max-width: 280px;
+  max-height: 280px;
   height: var(--size--large-photo);
   box-sizing: border-box;
 }
@@ -873,6 +879,7 @@ html {
 .author-post__img__shadow:after {
   content: " ";
   width: var(--size--shadow-large-photo);
+  max-width: var(--max-size--shadow-large-photo);
   border-radius: 100%;
   height: 10px;
   background: radial-gradient(black, white);
