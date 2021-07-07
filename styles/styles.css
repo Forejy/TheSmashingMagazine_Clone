@@ -380,7 +380,7 @@ html {
 
 /* //MARK: Layout */
 
-.first-section, . .second-section {
+.first-section, .second-section {
   width: 90%;
 }
 
@@ -453,7 +453,6 @@ html {
 }
 
 .main-nav__menu-btn {
-  margin-right: 6px;
   border: 1px solid #a02c21;
   border-radius: 11px;
   height: 47px;
@@ -500,7 +499,7 @@ html {
   margin-top: 8px;
   flex-grow: 1;
   flex-shrink: 0;
-  flex-basis: 289px;
+  flex-basis: 295px;
 }
 
 .search-bar_input {
@@ -1041,6 +1040,7 @@ html {
 
   font-size: 21px;
   font-weight: 700;
+  text-decoration: none;
 
   margin: 19px 0;
   border-radius: 10px;
@@ -1094,7 +1094,7 @@ html {
 
 .promo-box__footer {
   display: inline-block;
-  font-size: 13px;
+  font-size: 0.72rem;
 }
 
 /* //MARK: ... Promo-box--newsletter  */
